@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
 
@@ -7,7 +7,7 @@ const Tab2: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>Random fact generator</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -16,7 +16,7 @@ const Tab2: React.FC = () => {
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <ExploreContainer name="Random Fact Generator" />
       </IonContent>
     </IonPage>
   );
