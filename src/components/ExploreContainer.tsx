@@ -1,16 +1,27 @@
 import { IonButton } from '@ionic/react';
 import './ExploreContainer.css';
+import { useState } from 'react';
 
 interface ContainerProps {
   name: string;
 }
 
 const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
+const [facttext, setfacttext]=useState("")
+
+
+  async function Fact() {
+    let response=await fetch("https://uselessfacts.jsph.pl/api/v2/facts/random")
+    response=await response.json()
+    setfacttext(response.text) 
+  }
+
+
   return (
     <div className="container">
       <strong>{name}</strong>
-      <p>press this button to get a random fact!</p>
-      <IonButton size="large">get random fact</IonButton>
+      <p>{facttext}</p>
+      <IonButton onClick={Fact} size="large">get random fact</IonButton>
     </div>
   );
 };

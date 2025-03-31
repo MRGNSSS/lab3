@@ -7,7 +7,7 @@ const Tab2: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Random fact generator</IonTitle>
+          <center><IonTitle>Random Fact Generator</IonTitle></center>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -16,7 +16,8 @@ const Tab2: React.FC = () => {
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Random Fact Generator" />
+        <center><p>Press the big blue button to recieve a random fact!</p></center>
+        <ExploreContainer name="" />
       </IonContent>
     </IonPage>
   );
